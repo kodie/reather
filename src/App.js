@@ -29,10 +29,10 @@ class App extends Component {
 
     // Get initial value via URL path
     let value = ''
-    if (window.location.pathname !== '/') {
-      value = decodeURIComponent(window.location.pathname.substring(1))
-      if (consoleLog) console.log('Value set via pathname:', value)
-    }
+    // if (window.location.pathname !== '/') {
+    //   value = decodeURIComponent(window.location.pathname.substring(1))
+    //   if (consoleLog) console.log('Value set via pathname:', value)
+    // }
 
     this.state = Object.assign({}, this.blankState, { value })
     this.clearState = this.clearState.bind(this)
@@ -71,6 +71,7 @@ class App extends Component {
       if (consoleLog) console.log('Browser does not support geolocation')
     }
 
+    /*
     // Detect if user hits the back or forward buttons
     window.addEventListener('popstate', e => {
       if (consoleLog) console.log('Window popstate:', window.location.pathname)
@@ -84,6 +85,7 @@ class App extends Component {
         self.setState({ value }, () => self.getWeather())
       }
     })
+    */
   }
 
   // Converts directions from degress to compass
@@ -143,9 +145,9 @@ class App extends Component {
 
     // Change the URL to reflect our search
     let path = '/' + this.state.value
-    if (decodeURIComponent(window.location.pathname) !== path) {
-      window.history.pushState(null, null, path)
-    }
+    // if (decodeURIComponent(window.location.pathname) !== path) {
+    //   window.history.pushState(null, null, path)
+    // }
 
     // Use regex to check if search value is coordinates
     let reg = new RegExp(/(^[-+]?(?:[1-8]?\d(?:\.\d+)?|90(?:\.0+)?)),\s*([-+]?(?:180(?:\.0+)?|(?:(?:1[0-7]\d)|(?:[1-9]?\d))(?:\.\d+)?))$/)
@@ -280,7 +282,7 @@ class App extends Component {
             value="Try another location"
             onClick={ () => {
               this.clearState()
-              window.history.pushState(null, null, '/')
+              // window.history.pushState(null, null, '/')
             } } />
         </div>
       )
