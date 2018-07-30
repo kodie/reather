@@ -144,7 +144,7 @@ class App extends Component {
     let self = this
 
     // Change the URL to reflect our search
-    let path = '/' + this.state.value
+    // let path = '/' + this.state.value
     // if (decodeURIComponent(window.location.pathname) !== path) {
     //   window.history.pushState(null, null, path)
     // }
