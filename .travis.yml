@@ -3,6 +3,7 @@ node_js:
   - 8
   - 7
   - 6
+before_deploy: npm run predeploy
 deploy:
   provider: pages
   local-dir: build/
