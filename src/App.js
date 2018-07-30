@@ -100,7 +100,7 @@ class App extends Component {
     if (!value) return
     if (this.state.request) this.state.request.abort() // Abort last active request
 
-    let url = `http://ws.geonames.org/searchJSON?username=${Settings.geonamesUser}&maxRows=1000&country=${Settings.country}&`
+    let url = `https://secure.geonames.org/searchJSON?username=${Settings.geonamesUser}&maxRows=1000&country=${Settings.country}&`
     let self = this
 
     // Decide which query parameter to use depending on if value is a zip code or not
@@ -140,7 +140,7 @@ class App extends Component {
     if (!this.state.value) return
     this.setState({ loading:true, error:null })
 
-    let url = `http://api.openweathermap.org/data/2.5/weather?appid=${Settings.openmapKey}&units=${Settings.units}&`
+    let url = `https://api.openweathermap.org/data/2.5/weather?appid=${Settings.openmapKey}&units=${Settings.units}&`
     let self = this
 
     // Change the URL to reflect our search
