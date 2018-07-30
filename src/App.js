@@ -27,8 +27,9 @@ class App extends Component {
     super(props)
     if (consoleLog) console.log('%c Welcome to Reather! :) ', 'background:#ffc966;border:5px solid #ffa500;border-radius:10px;padding:5px;')
 
-    // Get initial value via URL path
     let value = ''
+
+    // Get initial value via URL path
     // if (window.location.pathname !== '/') {
     //   value = decodeURIComponent(window.location.pathname.substring(1))
     //   if (consoleLog) console.log('Value set via pathname:', value)
