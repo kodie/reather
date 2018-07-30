@@ -71,21 +71,19 @@ class App extends Component {
       if (consoleLog) console.log('Browser does not support geolocation')
     }
 
-    /*
     // Detect if user hits the back or forward buttons
-    window.addEventListener('popstate', e => {
-      if (consoleLog) console.log('Window popstate:', window.location.pathname)
-
-      if (window.location.pathname === '/') {
-        // Reset state if going back to root
-        self.clearState()
-      } else {
-        // Otherwise set the value and get the weather
-        let value = decodeURIComponent(window.location.pathname.substring(1))
-        self.setState({ value }, () => self.getWeather())
-      }
-    })
-    */
+    // window.addEventListener('popstate', e => {
+    //   if (consoleLog) console.log('Window popstate:', window.location.pathname)
+    //
+    //   if (window.location.pathname === '/') {
+    //     // Reset state if going back to root
+    //     self.clearState()
+    //   } else {
+    //     // Otherwise set the value and get the weather
+    //     let value = decodeURIComponent(window.location.pathname.substring(1))
+    //     self.setState({ value }, () => self.getWeather())
+    //   }
+    // })
   }
 
   // Converts directions from degress to compass
@@ -201,7 +199,7 @@ class App extends Component {
 
           <form onSubmit={ e => { e.preventDefault(); this.getWeather(); } }>
             <Autocomplete
-              items={this.state.locations}
+              items={ this.state.locations }
               shouldItemRender={ (item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1 }
               getItemValue={ item => item.label }
               menuStyle={ {
