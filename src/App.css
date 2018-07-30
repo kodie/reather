@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #008fe5;
+  background-position: -20px -20px;
+  color: #383838;
+  font-family: verdana;
+  font-size: 16px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.modal {
+  background-color: #ffc966;
+  border: 10px solid #ffa500;
+  box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.footer {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.error {
+  color: #c21807;
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.spin {
+  animation: spin infinite 5s linear;
+}
+
+a {
+  color: #383838;
+}
+
+h1 {
+  font-size: 30px;
+  position: absolute;
+  top: -40px;
+  left: 20px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  background-color: #ffa500;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.landing input[type="submit"] {
+  margin-left: 5px;
+}
+
+.results input[type="button"] {
+  margin-top: 20px;
+}
+
+.github-fork-ribbon {
+  display: block !important;
+}
+
+.github-fork-ribbon:before {
+  background-color: #ffa500;
+  color: #383838;
+}
+
+.github-fork-ribbon:after {
+  color: #383838;
+  text-shadow: none;
+}
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
