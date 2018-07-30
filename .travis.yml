@@ -8,3 +8,4 @@ deploy:
   provider: pages
   local-dir: build/
   github_token: $GITHUB_TOKEN
+  skip_cleanup: true
