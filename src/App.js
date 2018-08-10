@@ -289,7 +289,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <a href="/">
+        <a href="./">
           <h1><i className={ 'wi wi-day-sunny ' + (this.state.loading ? 'spin' : '') }></i> Reather</h1>
         </a>
         <div className="modal">{ template }</div>
