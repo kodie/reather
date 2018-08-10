@@ -216,9 +216,9 @@ class App extends Component {
               } }
               renderItem={ (item, highlighted) =>
                 <div
-                  key={item.id}
-                  style={{backgroundColor: highlighted ? '#ffc966' : 'transparent'}}>
-                  {item.label}
+                  key={ item.id }
+                  style={ { backgroundColor: highlighted ? '#ffc966' : 'transparent' } }>
+                  { item.label }
                 </div>
               }
               inputProps={ { id:'location-value', disabled:this.state.loading } }
@@ -262,7 +262,7 @@ class App extends Component {
       template = (
         <div className="results">
           <h2>
-            <i className={`wi wi-${weatherTime}-${weatherIconType}`}></i> {weather.main.temp.toFixed(1)}&deg;
+            <i className={ `wi wi-${weatherTime}-${weatherIconType}` }></i> { weather.main.temp.toFixed(1) }&deg;
             <br />{ weather.name }
           </h2>
           <p>{ weather.weather[0].description }</p>
@@ -290,7 +290,7 @@ class App extends Component {
     return (
       <div className="app">
         <a href="/">
-          <h1><i className={'wi wi-day-sunny ' + (this.state.loading ? 'spin' : '')}></i> Reather</h1>
+          <h1><i className={ 'wi wi-day-sunny ' + (this.state.loading ? 'spin' : '') }></i> Reather</h1>
         </a>
         <div className="modal">{ template }</div>
         <div className="footer">
